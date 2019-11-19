@@ -5,11 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Circo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="180" Width="798">
+        Title="MainWindow" Height="711" Width="1387.3" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="btnInicio" Content="Inicio" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="btnInicio_Click"/>
-        <Button x:Name="btnDetener" Content="Detener" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="75" Click="btnDetener_Click"/>
-        <TextBlock x:Name="lblHertz" HorizontalAlignment="Left" Margin="637,29,0,0" TextWrapping="Wrap" Text="- Hz" VerticalAlignment="Top" FontSize="72" Width="143"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="recursos/Perdio-01.jpg"/>
+        </Grid.Background>
+        <Button x:Name="btnInicio" HorizontalAlignment="Left" Margin="478,268,0,0" VerticalAlignment="Top" Width="456" Click="btnInicio_Click" Height="121" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush ImageSource="recursos/btnStart.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnDetener" HorizontalAlignment="Left" Margin="478,431,0,0" VerticalAlignment="Top" Width="456" Click="btnDetener_Click" Height="121" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush ImageSource="recursos/btnRestart.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="lblHertz" HorizontalAlignment="Left" Margin="874,552,0,0" TextWrapping="Wrap" Text="- Hz" VerticalAlignment="Top" FontSize="72" Width="495" TextAlignment="Right"/>
 
     </Grid>
 </Window>
