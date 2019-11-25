@@ -10,7 +10,16 @@
         <Grid.Background>
             <ImageBrush ImageSource="recursos/FondoJuego-01-01.jpg"/>
         </Grid.Background>
-        <Image x:Name="personaje" Source="recursos/Persona.png" Margin="608,168,586,188" RenderTransformOrigin="0.5,1.003"/>
+        <Image x:Name="personaje" Source="recursos/Persona.png" Margin="608,168,586,188" RenderTransformOrigin="0.5,1.003">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform x:Name="rotacionPersonaje" />
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
         <TextBlock x:Name="lblHertz" HorizontalAlignment="Left" Margin="874,552,0,0" TextWrapping="Wrap" Text="- Hz" VerticalAlignment="Top" FontSize="72" Width="495" TextAlignment="Right"/>
 
     </Grid>

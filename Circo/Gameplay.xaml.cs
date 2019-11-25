@@ -44,7 +44,7 @@ namespace Circo
             formato = waveIn.WaveFormat;
 
             //Duracion del buffer
-            waveIn.BufferMilliseconds = 500;
+            waveIn.BufferMilliseconds = 70;
 
             //Con que funcion respondemos
             //Cuando se llena el buffer
@@ -103,11 +103,26 @@ namespace Circo
             float frecuenciaFundamental =
                 (float)(indiceValorMaximo * formato.SampleRate) /
                 (float)valoresAbsolutos.Length;
-
+            
             //waveIn.StopRecording();
 
+            if(frecuenciaFundamental < 700)
+            {
+                rotar(rotacionPersonaje.Angle-10);
+            }
 
             lblHertz.Text = frecuenciaFundamental.ToString("N") + " Hz";
+
+
         }
+
+        public void rotar(double angulo)
+        {
+            RotateTransform cambiarAngulo = new RotateTransform(angulo);
+            personaje.RenderTransform = cambiarAngulo;
+            rotacionPersonaje.Angle = cambiarAngulo.Angle;
+        }
+
+        
     }
 }
