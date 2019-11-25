@@ -13,29 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using NAudio;
-using NAudio.Wave;
-using NAudio.Dsp;
-
 namespace Circo
 {
     /// <summary>
-    /// Lógica de interacción para Menu.xaml
+    /// Lógica de interacción para GameOver.xaml
     /// </summary>
-    public partial class Menu : UserControl
+    public partial class GameOver : UserControl
     {
-        MainWindow.EstadodeJuego estadoActual;
-        Action callBackIniciar;
-        public Menu(Action iniciar)
+        public GameOver()
         {
             InitializeComponent();
-            callBackIniciar = iniciar;
         }
 
-        private void btnInicio_Click(object sender, RoutedEventArgs e)
+        private void BtnRestart_Click(object sender, RoutedEventArgs e)
         {
-            callBackIniciar();
-        }
 
+        }
     }
 }

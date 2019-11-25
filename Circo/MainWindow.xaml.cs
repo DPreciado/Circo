@@ -29,28 +29,23 @@ namespace Circo
         public EstadodeJuego estadoActual = EstadodeJuego.menu;
 
         
-        
         public void iniciar()
         {
             estadoActual = EstadodeJuego.gameplay;
+            pantallaPrincipal.Children.Clear();
+            pantallaPrincipal.Children.Add(new Gameplay(perder));
+        }
+
+        public void perder()
+        {
+            estadoActual = EstadodeJuego.gameOver;
         }
         
         public MainWindow()
         {
             InitializeComponent();
-
-            if(estadoActual == EstadodeJuego.menu)
-            {
                 pantallaPrincipal.Children.Add(new Menu(iniciar));
-                
-            
-            }
-
-            
         }
 
-        
-
-        
     }
-}
+    }
